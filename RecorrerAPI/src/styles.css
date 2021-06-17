@@ -1,0 +1,16 @@
+body {
+  background-image: url(../src/star.jpg);
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  margin-right: 100px;
+  margin-left: 20px;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  background: rgb(118, 253, 45);
+  background-repeat: no-repeat;
+}

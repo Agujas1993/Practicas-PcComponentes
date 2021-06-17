@@ -1,0 +1,116 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Subastas</title>
+  </head>
+  <body>
+    <strong><p class="text">SONY PLAYSTATION 5 PS5 CONSOLE 825GB DIGITAL EDITION White NUOVO</p></strong>
+    <div class="timer">
+      <section class="timer">
+        <p>
+          <span id="days"></span> días, <span id="hours"></span> horas,
+          <span id="minutes"></span> minutos y
+          <span id="seconds"></span> segundos para que finalice la puja!!!
+        </p>
+      </section>
+    </div>
+    <nav><td>
+      <tr><div><img class="center" src="../src/p5.jpeg" /></div></tr>
+      <div class="price"><p>El precio actual es: <p><price></price>
+      </nav></div>
+
+      <div class="minPrice">
+      <p>El precio mínimo de la siguiente puja es: </p><minPrice></minPrice>
+      </br>
+      <p  class="shippingPrice">Gastos de envío: 5€</p>
+      </div>
+
+
+
+      <div class="bid">
+          <tr><button id="5">5€</button></tr>
+          <tr><button id="10">10€</button></tr>
+          <tr><button id="15">15€</button></tr>
+      </div>
+
+      <div class="form">
+      <p>Puja directa</p>
+        <tr><form action="#"></tr>
+        <tr><input type="number" id="Dprice" placeholder="10€" required size="5" /></tr>
+        <input id="input" type="submit" value="Pujar" />
+      </form>
+    
+      <div class="bidHist">
+          <p>Historial de pujas </p><bidHist><p></bidHist></p>
+          </div>
+      
+
+    </div></td>
+
+    <!-- Contador regresivo -->
+
+    <!-- Fin contador regresivo -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        //===
+        // VARIABLES
+        //===
+        const DATE_TARGET = new Date("07/28/2021 10:30 AM");
+        // DOM for render
+        const SPAN_DAYS = document.querySelector("span#days");
+        const SPAN_HOURS = document.querySelector("span#hours");
+        const SPAN_MINUTES = document.querySelector("span#minutes");
+        const SPAN_SECONDS = document.querySelector("span#seconds");
+        // Milliseconds for the calculations
+        const MILLISECONDS_OF_A_SECOND = 1000;
+        const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+        const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24;
+
+        //===
+        // FUNCTIONS
+        //===
+
+        /**
+         * Method that updates the countdown and the sample
+         */
+        function updateCountdown() {
+          // Calcs
+          const NOW = new Date();
+          const DURATION = DATE_TARGET - NOW;
+          const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+          const REMAINING_HOURS = Math.floor(
+            (DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR
+          );
+          const REMAINING_MINUTES = Math.floor(
+            (DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE
+          );
+          const REMAINING_SECONDS = Math.floor(
+            (DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND
+          );
+
+          SPAN_DAYS.textContent = REMAINING_DAYS;
+          SPAN_HOURS.textContent = REMAINING_HOURS;
+          SPAN_MINUTES.textContent = REMAINING_MINUTES;
+          SPAN_SECONDS.textContent = REMAINING_SECONDS;
+        }
+
+        //===
+        // INIT
+        //===
+        updateCountdown();
+        // Refresh every second
+        setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+      });
+    </script>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

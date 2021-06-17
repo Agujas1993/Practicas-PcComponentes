@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  background: rgb(253, 45, 243);
+}
+.center {
+  margin-left: 200px;
+  float: left;
+  display: block;
+  margin-right: 60px;
+}
+.text {
+  margin-top: 20px;
+  margin-left: 400px;
+  display: block;
+  size: 200px;
+}
+.timer {
+  margin-top: 10px;
+  margin-left: 600px;
+  display: block;
+}
+.form {
+  margin-top: 50px;
+  margin-left: 1000px;
+}
+.price {
+  margin-top: 50px;
+  margin-left: 1000px;
+}
+.bid {
+  margin-top: 50px;
+  margin-left: 1000px;
+}
+.minPrice {
+  margin-top: 50px;
+  margin-left: 1000px;
+}
+nav img {
+  width: 40%;
+  height: auto;
+}
