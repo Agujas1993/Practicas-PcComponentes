@@ -67,11 +67,12 @@ if(isset($_POST['editar'])) {
     $sqlA = mysqli_query($connect,"SELECT password FROM usuarios WHERE usuario= '".$_SESSION['admin_name']."'");
     $rowA = mysqli_fetch_array($sqlA);
 
-    if($rowA['password'] == $passActual) {
+    if(password_verify($passActual,$rowA['password'] )) {
         
         if($pass1 == $pass2) {
-
-            $update = mysqli_query($connect,"UPDATE usuarios SET password = '$pass1' WHERE usuario= '".$_SESSION['admin_name']."'");
+         
+            $strong_pass = password_hash($pass1,PASSWORD_DEFAULT);
+            $update = mysqli_query($connect,"UPDATE usuarios SET password = '$strong_pass' WHERE usuario= '".$_SESSION['admin_name']."'");
             if($update) {
                 echo '
                 <script>

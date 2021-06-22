@@ -10,11 +10,13 @@ if(isset($_POST["login"])) {
     if(!empty($_POST['member_name']) && !empty($_POST['member_password'])) {
         $name=mysqli_real_escape_string($connect,$_POST['member_name']);
         $pass=mysqli_real_escape_string($connect,$_POST['member_password']);
-        $sql = "SELECT * FROM usuarios where usuario='".$name. "' AND password='".$pass."'";
+        $sql = "SELECT * FROM usuarios where usuario= '$name' ";
         $result =mysqli_query($connect,$sql);
         $user=mysqli_fetch_array($result);
 
-        if($user) {
+        if(password_verify($pass,$user['password'])) {
+
+
             if(!empty($_POST['remember'])){
                 setcookie("member_login", $name, time()+(10 * 365 *24 * 60 * 60));
                 setcookie("member_password", $pass, time()+(10 * 365 *24 * 60 * 60));
@@ -52,7 +54,7 @@ else {
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/color.css">
     <link rel="stylesheet" href="/css/responsive.css">
-    <link  rel="stylesheet" href="css/my.css">
+    <link  rel="stylesheet" href="css/my1.css">
 
     </head>
     <body>
@@ -78,6 +80,7 @@ else {
                                     <input type="password" name="member_password" id="inputp"  value="<?php if(isset($_COOKIE['member_password'])) {
                                         echo $_COOKIE['member_password']; } ?>" required>
                                     <label class="control-label" for="inputp">Contraseña</label><i class="mtrl-select"></i>
+                                   <img src="mostrar.png" id="button" class="form-group">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -95,5 +98,6 @@ else {
             </div>
        </div>
   </div>
+  <script src="confirm.js"></script>
 </body>
 </html>

@@ -48,7 +48,11 @@ try {
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     if(isset($_POST['email']) && !empty($_POST['email'])){
-        $pass = substr( md5(microtime()), 1, 10);
+        
+        $caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$';
+        $longitud = 20;
+        $pass = substr(str_shuffle($caracteres),0 , $longitud);
+        $strong_pass = password_hash($pass,PASSWORD_DEFAULT);
         $email = $_POST['email'];
         
         // Check connection
@@ -56,14 +60,14 @@ try {
             die("Connection failed: " . $connect->connect_error);
         } 
         
-        $sql = "Update usuarios Set password='$pass' Where usuario='$email'";
+        $sql = "Update usuarios Set password='$strong_pass' Where usuario='$email'";
 
         if ($connect->query($sql) === TRUE) {
             echo "Ok. ";
         } else {
             echo "Error modificando: " . $connect->error;
         }
-        
+       password_verify($pass,$strong_pass);
         $to = $_POST['email'];//"destinatario@email.com";
         $from = "From: " . "ElectroSubastas" ;
         $subject = "Recordar clave de acceso";
@@ -77,9 +81,15 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $message;
+    
 
     $mail->send();
-    echo 'Contraseña modificada correctamente ';
+        echo '
+        <script>
+        alert("Contraseña modificada correctamente, mensaje enviado a su correo.");
+        window.location = "./login.php";
+        </script>
+        ';
     }  else {
     
 }

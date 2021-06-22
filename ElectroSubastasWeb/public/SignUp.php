@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/color.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link  rel="stylesheet" href="css/my1.css">
     
     </head>
     <body>
@@ -26,7 +27,8 @@
                                 <input type="email" placeholder="Usuario" name="user" required>
                                 </div>
                                 <div class="form-group">
-                                <input type="password" placeholder="Contraseña" name="password" required>
+                                <input type="password" placeholder="Contraseña" name="password" id="inputp" required>
+                                <img src="mostrar.png" id="button" class="form-group">
                                 </div>
                                 
                                 <div class="submit-btns">
@@ -40,5 +42,6 @@
   </div>
   </form>
         </div>
+        <script src="confirm.js"></script>
     <body>
 </html>
