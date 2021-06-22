@@ -86,7 +86,7 @@ else {
                                         } ?>><i class="check-box"></i>Recuérdame siempre.
                                     </label>
                                 </div>
-                                <a href="./recuperarContraseña.php" class="forgot-pwd">¿Has olvidado la contraseña?</a>
+                                <a href="./recoverPassword.php" class="forgot-pwd">¿Has olvidado la contraseña?</a>
                                 <div class="submit-btns">
                                     <button class="mr-btn signup" name="login" type="submit"><span>Iniciar Sesión</span></button>
 

@@ -2,7 +2,8 @@
 require "connection.php";
     $user = $_POST['user'];
     $password = $_POST['password'];
-    $query = "INSERT INTO usuarios(usuario, password) VALUES('$user', '$password')";
+    $strong_pass = password_hash($password,PASSWORD_DEFAULT);
+    $query = "INSERT INTO usuarios(usuario, password) VALUES('$user', '$strong_pass')";
 
 
     $checkUser = mysqli_query($connect, "SELECT * FROM usuarios WHERE usuario='$user' ");

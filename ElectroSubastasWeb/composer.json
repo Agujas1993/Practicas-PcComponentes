@@ -5,7 +5,7 @@
         "symfony/http-foundation": "^5.3",
         "symfony/routing": "^5.2",
         "symfony/http-kernel": "^5.2",
-        "phpmailer/phpmailer": "v6.4.1"
+        "phpmailer/phpmailer": "^6.5"
     },
     "autoload": {
         "psr-4": {

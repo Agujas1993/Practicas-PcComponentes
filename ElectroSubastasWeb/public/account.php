@@ -31,7 +31,6 @@ if(!isset($_SESSION['admin_name']))
 <div class="container box">
 <p><h4 style="text-align: center;"><a href="deleteUser.php">Eliminar Cuenta</a></h4></p>
 </div>
-                            
-                  
-                            </body>
-                            </html>
+                                        
+</body>
+</html>
