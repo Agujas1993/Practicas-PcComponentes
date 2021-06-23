@@ -120,5 +120,6 @@ if(isset($_POST['editar'])) {
 </div>
 </div>
 </div>
+<script src="confirm.js"></script>
 <body>
     </html>

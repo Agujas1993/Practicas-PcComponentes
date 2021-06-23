@@ -19,7 +19,7 @@
                             <h2 class="log-title" style="text-align: center;">Recordar contraseña</h2>
         <div class="form-group">
         <form action="recoverPassword.php" method="POST">
-            <input type="email" name="email" value="" placeholder="email" required /> <br/>
+            <input type="email" name="email" value="" placeholder="Ingresa el email de recuperación" required /> <br/>
             <button class="mr-btn signup" value="Email" type="submit"><span>Enviar</span></button>
             <p><a href="login.php" class="forgot-pwd">Inicia sesión </a></p>
         </form>

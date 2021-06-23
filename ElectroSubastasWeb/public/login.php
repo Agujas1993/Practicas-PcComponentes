@@ -80,7 +80,7 @@ else {
                                     <input type="password" name="member_password" id="inputp"  value="<?php if(isset($_COOKIE['member_password'])) {
                                         echo $_COOKIE['member_password']; } ?>" required>
                                     <label class="control-label" for="inputp">Contraseña</label><i class="mtrl-select"></i>
-                                   <img src="mostrar.png" id="button" class="form-group">
+                                   <img src="mostrar1.png" id="button" class="form-group">
                                 </div>
                                 <div class="checkbox">
                                     <label>

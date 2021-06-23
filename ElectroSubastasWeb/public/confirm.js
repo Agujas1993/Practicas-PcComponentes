@@ -21,13 +21,13 @@ function showPassword(){
     if(input.type == "password"){
         input.type = "text";
         boton.src ="ocultar.png";
-        setTimeout("ocultar()", 3000);
+        setTimeout("hidePassword()", 1000);
     } else {
         input.type = "password";
-        button.src = "mostrar.png";
+        button.src = "mostrar1.png";
     }
 }
 function hidePassword(){
         input.type="password";
-        button.src ="ocultar.png";
+        button.src ="mostrar1.png";
     }
