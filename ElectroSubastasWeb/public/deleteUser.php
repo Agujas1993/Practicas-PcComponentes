@@ -42,7 +42,7 @@
                             <h2 class="log-title" style="text-align: center;">Eliminar cuenta</h2>
 <form action="./deleteUser.php" method="post">
 <?php
-require "connection.php";
+require "../src/Application/connection.php";
 
 session_start();
 if(!isset($_SESSION['admin_name']))
@@ -68,6 +68,6 @@ if($eliminar) {
         <div class="container box"><h4 style="padding:20px;">Eliminar la cuenta <?php echo $_SESSION['admin_name']; ?></h4>
         <input type="submit" name="delete" value="Eliminar" class="tb" required>
     </div>
-    <script src="confirm.js"></script>
+    <script src="index.js"></script>
     </body>
     </html>

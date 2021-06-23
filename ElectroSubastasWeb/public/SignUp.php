@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group">
                                 <input type="password" placeholder="Contraseña" name="password" id="inputp" required>
-                                <img src="mostrar1.png" id="button" class="form-group">
+                                <img src="mostrar.png" id="button" class="form-group">
                                 </div>
                                 
                                 <div class="submit-btns">
@@ -42,6 +42,6 @@
   </div>
   </form>
         </div>
-        <script src="confirm.js"></script>
+        <script src="index.js"></script>
     <body>
 </html>

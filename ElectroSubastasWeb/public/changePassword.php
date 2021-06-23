@@ -53,7 +53,7 @@
 <form action="./changePassword.php" method="post">
 <?php 
 session_start();
-require "connection.php";
+require "../src/Application/connection.php";
 if(!isset($_SESSION['admin_name']))
 {
     header("location:login.php");
@@ -120,6 +120,6 @@ if(isset($_POST['editar'])) {
 </div>
 </div>
 </div>
-<script src="confirm.js"></script>
+<script src="index.js"></script>
 <body>
     </html>
