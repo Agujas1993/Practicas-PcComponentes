@@ -12,8 +12,8 @@ if(!isset($_SESSION['admin_name']))
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link  rel="stylesheet" href="css/bootstrap.min.css">
-    <link  rel="stylesheet" href="css/my.css">
+    <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="assets/css/my.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 </head>
@@ -130,6 +130,6 @@ if(!isset($_SESSION['admin_name']))
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-        <script src="js"></script>
+        <script src="assets/js/file.js"></script>
     </body>
 </html>

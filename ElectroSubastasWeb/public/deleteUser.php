@@ -6,10 +6,10 @@
         <title>Eliminar cuenta</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,7 +42,7 @@
                             <h2 class="log-title" style="text-align: center;">Eliminar cuenta</h2>
 <form action="./deleteUser.php" method="post">
 <?php
-require "../src/Application/connection.php";
+require "../src/Infrastructure/db/connection.php";
 
 session_start();
 if(!isset($_SESSION['admin_name']))
@@ -68,6 +68,7 @@ if($eliminar) {
         <div class="container box"><h4 style="padding:20px;">Eliminar la cuenta <?php echo $_SESSION['admin_name']; ?></h4>
         <input type="submit" name="delete" value="Eliminar" class="tb" required>
     </div>
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
     </html>

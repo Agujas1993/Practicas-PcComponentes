@@ -5,11 +5,11 @@
         <title>Cambiar contraseña</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link  rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link  rel="stylesheet" href="assets/css/my.css">
 
     </head>
     <body>
@@ -53,7 +53,7 @@
 <form action="./changePassword.php" method="post">
 <?php 
 session_start();
-require "../src/Application/connection.php";
+require "../src/Infrastructure/db/connection.php";
 if(!isset($_SESSION['admin_name']))
 {
     header("location:login.php");
@@ -84,7 +84,7 @@ if(isset($_POST['editar'])) {
                 echo "Las dos contraseñas no coinciden.";
             }
         } else {
-            echo "Tu contraseña actual no coinciden.";
+            echo "Tu contraseña actual no coincide.";
         }
     } 
 }
@@ -120,6 +120,6 @@ if(isset($_POST['editar'])) {
 </div>
 </div>
 </div>
-<script src="index.js"></script>
+<script src="assets/js/index.js"></script>
 <body>
     </html>

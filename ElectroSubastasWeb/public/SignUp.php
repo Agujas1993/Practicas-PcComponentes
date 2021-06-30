@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <title>SignUp</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link  rel="stylesheet" href="css/my1.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link  rel="stylesheet" href="assets/css/my1.css">
     
     </head>
     <body>
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group">
                                 <input type="password" placeholder="Contraseña" name="password" id="inputp" required>
-                                <img src="mostrar.png" id="button" class="form-group">
+                                <img src="assets/mostrar.png" id="button" class="form-group">
                                 </div>
                                 
                                 <div class="submit-btns">
@@ -42,6 +42,6 @@
   </div>
   </form>
         </div>
-        <script src="index.js"></script>
+        <script src="assets/js/index.js"></script>
     <body>
 </html>

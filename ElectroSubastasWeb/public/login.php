@@ -1,5 +1,5 @@
 <?php
-require "../src/Application/connection.php";
+require "../src/Infrastructure/db/connection.php";
 session_start();
 if(isset($_SESSION['admin_name']))
 {
@@ -49,13 +49,11 @@ else {
     <head>
         <meta charset="UTF-8" />
         <title>Login</title>
-
-    <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link  rel="stylesheet" href="css/my1.css">
-
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link  rel="stylesheet" href="assets/css/my1.css">
     </head>
     <body>
         <div class="theme-layout">
@@ -65,7 +63,7 @@ else {
                         <div class="login-reg-bg">
                             <div class="log-reg-area sign">
                             <h2 class="log-title" style="text-align: center;">Iniciar Sesión</h2>
-                            <p>Todavía no usas nuestra web? <a href="SignUp.php">Regístrate ya</a></p>
+                            <p>Todavía no usas nuestra web? <a  href="SignUp.php">Regístrate ya</a></p>
                             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                 <div class="form-group">
                                 <?php if(isset($mensaje)) {echo $mensaje;}?>
@@ -80,7 +78,7 @@ else {
                                     <input type="password" name="member_password" id="inputp"  value="<?php if(isset($_COOKIE['member_password'])) {
                                         echo $_COOKIE['member_password']; } ?>" required>
                                     <label class="control-label" for="inputp">Contraseña</label><i class="mtrl-select"></i>
-                                   <img src="mostrar.png" id="button" class="form-group">
+                                   <img src="assets/mostrar.png" id="button" class="form-group">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -98,6 +96,7 @@ else {
             </div>
        </div>
   </div>
-  <script src="index.js"></script>
+
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

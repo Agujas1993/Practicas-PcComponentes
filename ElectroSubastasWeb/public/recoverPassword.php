@@ -32,7 +32,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require '../vendor/autoload.php';
-require "../src/Application/connection.php";
+require "../src/Infrastructure/db/connection.php";
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 

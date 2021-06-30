@@ -1,5 +1,5 @@
 <?php
-require "../src/Application/connection.php";
+require "../src/Infrastructure/db/connection.php";
     $user = $_POST['user'];
     $password = $_POST['password'];
     $strong_pass = password_hash($password,PASSWORD_DEFAULT);

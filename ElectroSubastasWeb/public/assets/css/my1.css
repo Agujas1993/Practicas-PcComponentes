@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#ffff;
+}
+.box{
+    width:500px;
+    padding: 0px;
+    background-color:#fff;
+}
+
+img {
+            max-width: 22px;
+            max-height: 22px;
+            display:block;
+            margin:auto;
+        }
